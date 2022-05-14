@@ -20,7 +20,7 @@ An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 
 #### 1. Clone the repo
 
 
-    $ git clone
+    $ git clone https://github.com/lynn-1998/DeepCellEss.git
 
 #### 2. Create and activate the environment
 
