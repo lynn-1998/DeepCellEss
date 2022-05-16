@@ -1,4 +1,4 @@
-# [](http://bioinformatics.csu.edu.cn/DeepCellEss/static/imgs/Logo.svg)DeepCellEss
+# [http://bioinformatics.csu.edu.cn/DeepCellEss/static/imgs/Logo.svg]()DeepCellEss
 
 An interpretable deep learning-based cell line-specific essential protein prediction model. 
 
