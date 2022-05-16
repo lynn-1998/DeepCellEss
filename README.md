@@ -13,6 +13,7 @@ The DeepCellEss web server for prediction and visualization available at [http:/
 - scikit-learn=0.24.2
 - scipy=1.7.1
 - pytorch=1.9.0
+- gensim=3.8.3
 
 ## Usage
 
@@ -34,13 +35,17 @@ The trained models will be saved at file folder '../protein/saved_model/HCT-116/
 
 
     $ cd code
-	$ python main.py protein --cell_line=HCT-116 --gpu=0
+	$ python main.py protein --cell_line HCT-116 --gpu 0
 
 
-#### 4. Specify hyperparameters	
+#### 4. Specify model hyperparameters	
 
-
-	$ python main.py protein --cell_line=HCT-116 --gpu=0
+>***--cell_line*** is the name of cell line benchmark dataset to train.  
+>***--kernel_size*** is the kernel number of the CNN layer.  
+>***--head_num*** is the number of attention heads.  
+>***--hidden_dim*** is the dimention of the hidden state vector.  
+>***--layer_num*** is the number of lstm layers.  
+>***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
 
 
 ## License
