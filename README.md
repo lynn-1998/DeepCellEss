@@ -2,7 +2,7 @@
 
 An interpretable deep learning-based cell line-specific essential protein prediction model. 
 
-The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss/](http://bioinformatics.csu.edu.cn/DeepCellEss)
+The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss](http://bioinformatics.csu.edu.cn/DeepCellEss)
 
 
 ## Requirements
