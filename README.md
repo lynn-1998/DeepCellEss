@@ -21,13 +21,14 @@ An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 
 #### 1. Clone the repo
 
 
-    git clone https://github.com/lynn-1998/DeepCellEss.git
+    $ git clone https://github.com/lynn-1998/DeepCellEss.git
+    $ cd DeepCellEss
 
 #### 2. Create and activate the environment
 
 
-    conda create --name deepcelless --file requirments.txt
- 	conda activate deepcelless
+    $ conda create --name deepcelless --file requirments.txt
+ 	$ conda activate deepcelless
 
 
 #### 3. Train model
