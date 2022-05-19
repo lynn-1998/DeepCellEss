@@ -97,6 +97,12 @@ def train_cv():
             train_auc, train_aupr  = train_metrics[-2], train_metrics[-1]
             val_auc, val_aupr  = val_metrics[-2], val_metrics[-1]
             test_auc, test_aupr  = test_metrics[-2], test_metrics[-1]
+            
+            # Print evaluation result
+            print(f'\nEpoch [{epoch+1}/{epoch_num}]')
+            print_metrics('train', train_loss, train_metrics)
+            print_metrics('valid', val_loss, val_metrics)
+            # print_metrics('test', test_loss, test_metrics)
 
             # Sava the model by auc
             if val_auc > best_val_auc:
@@ -110,11 +116,6 @@ def train_cv():
                 
                 best_test_scores = test_scores
                 
-                # Print evaluation result
-                print(f'\nEpoch [{epoch+1}/{epoch_num}]')
-                print_metrics('train', train_loss, train_metrics)
-                print_metrics('valid', val_loss, val_metrics)
-                # print_metrics('test', test_loss, test_metrics)
                 print("!!!Get better model with valid AUC:{:.6f}. ".format(val_auc))
                 
             else:
