@@ -24,11 +24,15 @@ os.environ['PYTHONHUSHSEED'] = str(random_seed)
 
 warnings.filterwarnings('ignore')
 if torch.cuda.is_available():
+    num_workers = 16
     device = torch.device("cuda:" + str(args.gpu))
     torch.cuda.set_device(args.gpu)
 else:
+    num_workers = 0
     device = torch.device("cpu")
+    
 
+    
 
 def train_cv():
     seed, cell_line, seq_type, emb_type, max_len, epoch_num, batch_size, patience, threshold = \
@@ -50,7 +54,7 @@ def train_cv():
     
     # Load datasets
     train_dataset, test_dataset = load_dataset(seq_type, emb_type, cell_line, max_len, seed)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=16, worker_init_fn=np.random.seed(seed))
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers, worker_init_fn=np.random.seed(seed))
 
     # Model
     model = DeepEss(max_len, train_dataset.emb_dim, kernel_size, head_num, hidden_dim, layer_num, attn_drop, lstm_drop, linear_drop)
@@ -73,8 +77,8 @@ def train_cv():
     for i, (train_index, val_index) in enumerate(skf.split(train_dataset.features, train_dataset.labels)):
         print(f'\nStart training CV fold {i+1}:')
         train_sampler, val_sampler = SubsetRandomSampler(train_index), SubsetRandomSampler(val_index)
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=train_sampler, shuffle=False, num_workers=16, worker_init_fn=np.random.seed(seed))
-        val_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=val_sampler, shuffle=False, num_workers=16, worker_init_fn=np.random.seed(seed))
+        train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=train_sampler, shuffle=False, num_workers=num_workers, worker_init_fn=np.random.seed(seed))
+        val_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=val_sampler, shuffle=False, num_workers=num_workers, worker_init_fn=np.random.seed(seed))
         
         # Train model
         initial_model(model)
