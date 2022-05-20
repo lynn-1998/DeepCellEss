@@ -1,8 +1,8 @@
-# DeepCellEss
+# [<img style="height:40px" src="http://bioinformatics.csu.edu.cn/DeepCellEss/static/imgs/Logo.svg">](http://bioinformatics.csu.edu.cn/DeepCellEss)  DeepCellEss 
 
 An interpretable deep learning-based cell line-specific essential protein prediction model. 
 
-The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss/](http://bioinformatics.csu.edu.cn/DeepCellEss/)
+The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss](http://bioinformatics.csu.edu.cn/DeepCellEss)
 
 
 ## Requirements
@@ -21,14 +21,24 @@ An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 
 #### 1. Clone the repo
 
 
+<<<<<<< HEAD
     git clone https://github.com/lynn-1998/DeepCellEss.git
+=======
+    $ git clone https://github.com/lynn-1998/DeepCellEss.git
+    $ cd DeepCellEss
+>>>>>>> a73f55f623b05a2eb4359155f60f2766c5fe6564
 
 #### 2. Create and activate the environment
 
 
+<<<<<<< HEAD
     cd DeepCellEss
 	conda create --name deepcelless --file requirments.txt
 	conda activate deepcelless
+=======
+    $ conda create --name deepcelless --file requirments.txt
+ 	$ conda activate deepcelless
+>>>>>>> a73f55f623b05a2eb4359155f60f2766c5fe6564
 
 
 #### 3. Train model
