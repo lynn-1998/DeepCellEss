@@ -20,14 +20,35 @@ The DeepCellEss web server for prediction and visualization available at [http:/
 An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 platform.
 #### 1. Clone the repo
 
+<<<<<<< HEAD
     $ git clone https://github.com/lynn-1998/DeepCellEss.git
     $ cd DeepCellEss
+=======
+
+<<<<<<< HEAD
+    git clone https://github.com/lynn-1998/DeepCellEss.git
+=======
+    $ git clone https://github.com/lynn-1998/DeepCellEss.git
+    $ cd DeepCellEss
+>>>>>>> a73f55f623b05a2eb4359155f60f2766c5fe6564
+>>>>>>> 2558d7f8e546387b999a9c8f8df0c1f251f11d09
 
 
 #### 2. Create and activate the environment
 
+<<<<<<< HEAD
     $ conda create --name deepcelless --file requirments.txt
 	$ conda activate deepcelless
+=======
+<<<<<<< HEAD
+    cd DeepCellEss
+	conda create --name deepcelless --file requirments.txt
+	conda activate deepcelless
+=======
+    $ conda create --name deepcelless --file requirments.txt
+ 	$ conda activate deepcelless
+>>>>>>> a73f55f623b05a2eb4359155f60f2766c5fe6564
+>>>>>>> 2558d7f8e546387b999a9c8f8df0c1f251f11d09
 
 
 #### 3. Train model
