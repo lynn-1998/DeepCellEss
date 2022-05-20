@@ -1,8 +1,8 @@
-# DeepCellEss
+# [<img style="height:40px" src="http://bioinformatics.csu.edu.cn/DeepCellEss/static/imgs/Logo.svg">](http://bioinformatics.csu.edu.cn/DeepCellEss)  DeepCellEss 
 
 An interpretable deep learning-based cell line-specific essential protein prediction model. 
 
-The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss/](http://bioinformatics.csu.edu.cn/DeepCellEss/)
+The DeepCellEss web server for prediction and visualization available at [http://bioinformatics.csu.edu.cn/DeepCellEss](http://bioinformatics.csu.edu.cn/DeepCellEss)
 
 
 ## Requirements
@@ -20,27 +20,27 @@ The DeepCellEss web server for prediction and visualization available at [http:/
 An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 platform.
 #### 1. Clone the repo
 
+    $ git clone https://github.com/lynn-1998/DeepCellEss.git
+    $ cd DeepCellEss
 
-    git clone https://github.com/lynn-1998/DeepCellEss.git
 
 #### 2. Create and activate the environment
 
-
-    cd DeepCellEss
-	conda create --name deepcelless --file requirments.txt
-	conda activate deepcelless
+    $ conda create --name deepcelless --file requirments.txt
+	$ conda activate deepcelless
 
 
 #### 3. Train model
 The trained models will be saved at file folder '../protein/saved_model/HCT-116/'.
 
-
-    cd code
-	python main.py protein --cell_line HCT-116 --gpu 0
+    $ cd code
+	$ python main.py protein --cell_line HCT-116 --gpu 0
 
 
 #### 4. Specify model hyperparameters	
 
+>***--batch_size*** is the size of each batch while training.
+>***--lr*** is the learning rate while training.
 >***--cell_line*** is the name of cell line benchmark dataset to train.  
 >***--kernel_size*** is the kernel number of the CNN layer.  
 >***--head_num*** is the number of attention heads.  
