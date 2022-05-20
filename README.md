@@ -42,6 +42,8 @@ The trained models will be saved at file folder '../protein/saved_model/HCT-116/
 >***--hidden_dim*** is the dimention of the hidden state vector.  
 >***--layer_num*** is the number of lstm layers.  
 >***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
+>***--layer_num*** is the number of lstm layers.  
+>***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
 >***--batch_size*** is the size of each batch while training.
 >***--lr*** is the learning rate while training.
 
