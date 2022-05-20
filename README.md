@@ -36,14 +36,14 @@ The trained models will be saved at file folder '../protein/saved_model/HCT-116/
 
 #### 4. Specify model hyperparameters	
 
->***--batch_size*** is the size of each batch while training.
->***--lr*** is the learning rate while training.
->***--cell_line*** is the name of cell line benchmark dataset to train.  
+>***--cell_line***  is the name of cell line benchmark dataset to train.  
 >***--kernel_size*** is the kernel number of the CNN layer.  
 >***--head_num*** is the number of attention heads.  
 >***--hidden_dim*** is the dimention of the hidden state vector.  
 >***--layer_num*** is the number of lstm layers.  
 >***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
+>***--batch_size*** is the size of each batch while training.
+>***--lr*** is the learning rate while training.
 
 
 ## License
