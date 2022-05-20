@@ -20,32 +20,33 @@ The DeepCellEss web server for prediction and visualization available at [http:/
 An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 platform.
 #### 1. Clone the repo
 
+
     $ git clone https://github.com/lynn-1998/DeepCellEss.git
     $ cd DeepCellEss
 
+
 #### 2. Create and activate the environment
 
-    $ conda create --name deepcelless --file requirments.txt
-    $ conda activate deepcelless
+    $ cd DeepCellEss
+	$ conda create --name deepcelless --file requirments.txt
+	$ conda activate deepcelless
+
 
 #### 3. Train model
 The trained models will be saved at file folder '../protein/saved_model/HCT-116/'.
 
     $ cd code
-    $ python main.py protein --cell_line HCT-116 --gpu 0
+	$ python main.py protein --cell_line HCT-116 --gpu 0
+
 
 #### 4. Specify model hyperparameters	
 
->***--cell_line***  is the name of cell line benchmark dataset to train.  
+>***--batch_size*** is the size of each batch while training.
 >***--kernel_size*** is the kernel number of the CNN layer.  
 >***--head_num*** is the number of attention heads.  
 >***--hidden_dim*** is the dimention of the hidden state vector.  
 >***--layer_num*** is the number of lstm layers.  
 >***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
->***--layer_num*** is the number of lstm layers.  
->***--gpu*** is the gpu number you used to build and train the model. The defalt value of 0 means "cuda:0". No gpu will default to cpu.
->***--batch_size*** is the size of each batch while training.
->***--lr*** is the learning rate while training.
 
 
 ## License
