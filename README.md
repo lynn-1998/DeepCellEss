@@ -23,21 +23,16 @@ An demo to train DeepEssCell on the dataset of HCT-116 cell line using linux-64 
     $ git clone https://github.com/lynn-1998/DeepCellEss.git
     $ cd DeepCellEss
 
-
-
 #### 2. Create and activate the environment
 
     $ conda create --name deepcelless --file requirments.txt
     $ conda activate deepcelless
-
-
 
 #### 3. Train model
 The trained models will be saved at file folder '../protein/saved_model/HCT-116/'.
 
     $ cd code
     $ python main.py protein --cell_line HCT-116 --gpu 0
-
 
 #### 4. Specify model hyperparameters	
 
