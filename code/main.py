@@ -84,6 +84,8 @@ def train_cv():
         best_test_scores = []
         best_model = model
         for epoch in range(epoch_num):
+            print(f'\nEpoch [{epoch+1}/{epoch_num}]')
+            
             # Calculate prediction results and losses 
             train_trues, train_scores, train_loss = cal_by_epoch(mode='train', model=model, loader=train_loader, loss=loss, optimizer=optimizer)
             val_trues, val_scores, val_loss = cal_by_epoch(mode='val', model=model, loader=val_loader, loss=loss)
@@ -99,7 +101,6 @@ def train_cv():
             test_auc, test_aupr  = test_metrics[-2], test_metrics[-1]
             
             # Print evaluation result
-            print(f'\nEpoch [{epoch+1}/{epoch_num}]')
             print_metrics('train', train_loss, train_metrics)
             print_metrics('valid', val_loss, val_metrics)
             # print_metrics('test', test_loss, test_metrics)
